@@ -5,10 +5,10 @@ import { BsBackspace } from "react-icons/bs";
 import { Body, Calc, Result, Button, Keypad, Title } from "./calculadora.style";
 
 function Calculadora() {
-  const [num, setNum]: any = useState(0);
+  const [num, setNum]: any = useState("");
 
   const handleClick = (e: any) => {
-	setNum(e.target.value);
+	setNum(num.concat(e.target.value));
   }
 
   const clean = () => {
@@ -19,8 +19,8 @@ function Calculadora() {
 	setNum(num.slice(0, - 1))
   }
 
-  const sum = () => {
-	setNum(eval(num));
+  const calc = () => {
+	setNum(eval(num).toString());
   }
 
   return (
@@ -44,7 +44,7 @@ function Calculadora() {
 				<Button onClick={handleClick} value={1}>1</Button>
 				<Button onClick={handleClick} value={2}>2</Button>
 				<Button onClick={handleClick} value={3}>3</Button>
-				<Button onClick={e => setNum(eval(num))} value={'='}>=</Button>
+				<Button onClick={calc} value={'='}>=</Button>
 				<Button onClick={handleClick} value={0}>0</Button>
 				<Button onClick={handleClick} value={'.'}>.</Button>
 			</Keypad>
