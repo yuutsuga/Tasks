@@ -30,7 +30,7 @@ function Calculadora() {
 			<Result>{num}</Result>
 			<Keypad>
 				<Button onClick={clean}>C</Button>
-				<Button onClick={back}><BsBackspace /></Button>
+				<Button onClick={back}><BsBackspace size={27}/></Button>
 				<Button onClick={handleClick} value={'/'}>/</Button>
 				<Button onClick={handleClick} value={'*'}>x</Button>
 				<Button onClick={handleClick} value={7}>7</Button>

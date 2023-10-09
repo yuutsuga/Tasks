@@ -7,6 +7,10 @@ export const Body = styled.div`
     text-align: center;
     color: #fff;
     font-family: system-ui;
+    background-image: radial-gradient(#B454F4, #581484);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
 `
 
 export const Calc = styled.div`
@@ -48,4 +52,11 @@ export const Keypad = styled.div`
 `
 export const Title = styled.h1`
     margin-bottom: 10px;
+    color: white;
+    cursor: default;
+    &:hover{
+        color: white;
+        text-shadow: 0 0 8px white;
+    }
 `
+
