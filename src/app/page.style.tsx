@@ -26,5 +26,18 @@ export const Container = styled.div`
 `
 export const Title = styled.h1`
     margin-bottom: 50px;
+    cursor: default;
+    &:hover{
+        color: white;
+        text-shadow: 0 0 8px white;
+    }
 `
 
+export const Tasks = styled.p`
+    text-size: 30px;
+    cursor: pointer;
+    &:hover{
+        color: #855FF1;
+        transition: 0.5s;
+    }
+`
