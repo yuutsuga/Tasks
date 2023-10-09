@@ -25,7 +25,7 @@ export const Container = styled.div`
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 `
 export const Title = styled.h1`
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     cursor: default;
     &:hover{
         color: white;
@@ -35,6 +35,7 @@ export const Title = styled.h1`
 
 export const Tasks = styled.p`
     text-size: 30px;
+    padding: 5px;
     cursor: pointer;
     &:hover{
         color: #855FF1;
