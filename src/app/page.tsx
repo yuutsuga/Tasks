@@ -8,7 +8,8 @@ export default function Home() {
     <Main>
       <Container>
         <Title>My Tasks</Title>
-        <Link href={"/calculadora"}><Tasks>Calculadora</Tasks></Link>
+        <Link href={"/calculator"}><Tasks>Calculator</Tasks></Link>
+        <Link href={"/stopwatch"}><Tasks>Stopwatch</Tasks></Link>
       </Container>
     </Main>
   )
