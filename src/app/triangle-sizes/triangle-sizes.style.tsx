@@ -1,41 +1,35 @@
 import styled from 'styled-components';
 
-export const Body = styled.div`
+export const Body = styled.body`
+    background-image: url("https://i.pinimg.com/236x/0e/e6/6f/0ee66fe9108f17c50a091a337d669760.jpg");
     display: flex;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    color: #fff;
     font-family: system-ui;
-    background-image: radial-gradient(#B454F4, #581484);
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 76rem;
+    color: #fff;
 `
-export const Sw = styled.div`
+
+export const Wrapper = styled.div`
     position: absolute;
-    background-color: #252525;
-    top: 50%;
+    background-color: #C7C7C7;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
+    height: 30rem;
+    width: 50rem;
     border: 2px solid rgba(255, 255, 255, .2);
     border-color: #855FF1;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 `
-
-export const Timer = styled.span`
-    font-size: 40px;
-`
 export const Button = styled.button`
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    padding: 5px;
-    width: 90px;
-    height: 70px;
-    font-size: 20px;
+    width: 20rem;
+    height: 5rem;
+    margin: 5px;
+    font-size: 40px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
