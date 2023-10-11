@@ -10,6 +10,7 @@ export default function Home() {
         <Title>My Tasks</Title>
         <Link href={"/calculator"}><Tasks>Calculator</Tasks></Link>
         <Link href={"/stopwatch"}><Tasks>Stopwatch</Tasks></Link>
+        <Link href={"/triangle-sizes"}><Tasks>Triangle Sizes</Tasks></Link>
       </Container>
     </Main>
   )
