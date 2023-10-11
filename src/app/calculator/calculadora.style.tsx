@@ -21,6 +21,9 @@ export const Calc = styled.div`
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-color: #855FF1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 `
 
 export const Button = styled.button`
@@ -44,6 +47,9 @@ export const Result = styled.div`
     font-size: 25px;
     text-align: end;
     margin: 2px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-color: #855FF1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 `
 export const Keypad = styled.div`
     display: grid;
