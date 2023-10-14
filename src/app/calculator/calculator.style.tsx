@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Body = styled.div`
     display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
     text-align: center;
+    height: 100vh;
     color: #fff;
     font-family: system-ui;
     background-image: radial-gradient(#B454F4, #581484);
@@ -28,7 +29,8 @@ export const Calc = styled.div`
 
 export const Button = styled.button`
     margin-top: 10px;
-    width: 50px;
+    width: 55px;
+    position: relative;
     height: 50px;
     font-size: 20px;
     cursor: pointer;
@@ -39,14 +41,15 @@ export const Button = styled.button`
         transition: 0.5s;
     }
 `
-export const Result = styled.div`
+
+export const Result = styled.h1`
     border-radius: 5px;
     background-color: #fff;
-    height: 30px;
+    height: 40px;
     color: black;
     font-size: 25px;
     text-align: end;
-    margin: 2px;
+    margin: 5px;
     border: 2px solid rgba(255, 255, 255, .2);
     border-color: #855FF1;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
@@ -65,4 +68,3 @@ export const Title = styled.h1`
         text-shadow: 0 0 8px white;
     }
 `
-
