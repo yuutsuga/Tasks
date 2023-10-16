@@ -5,16 +5,15 @@ import { PiBackspaceThin } from "react-icons/pi";
 import { useState } from "react";
 
 const Calculator = () => {
-    const [num, setNum]: any = useState();
-    const [oldNum, setOldNum]: any = useState(0);
+    const [num, setNum]: any = useState('');
+    const [oldNum, setOldNum]: any = useState();
     const [operator, setOperator]: any = useState();
 
     const handleNum = (e: any) => {
-        let input = e.target.value;
         if (num === 0) {
-            setNum(input);
+            setNum(e.target.value)
         } else {
-            setNum(num + input);
+            setNum(num + e.target.value)
         }
     }
 
@@ -39,13 +38,13 @@ const Calculator = () => {
 
     const calc = () => {
         if (operator === '/') {
-            setNum(parseFloat(oldNum) / parseFloat(num));
+            setNum((Number(oldNum) / Number(num)).toFixed(1));
         } else if (operator === 'x') {
-            setNum(parseFloat(oldNum) * parseFloat(num));
+            setNum((Number(oldNum) * Number(num)).toFixed(1));
         } else if (operator === '-') {
-            setNum(parseFloat(oldNum) - parseFloat(num));
+            setNum((Number(oldNum) - Number(num)).toFixed(1));
         } else if (operator === '+') {
-            setNum(parseFloat(oldNum) + parseFloat(num));
+            setNum((Number(oldNum) + Number(num)).toFixed(1));
         }
     }
     return (
@@ -54,8 +53,8 @@ const Calculator = () => {
             <Title>Do your math :D</Title>
             <Result>{num}</Result>
             <Keypad>
-                <Button onClick={clearAll} value={''}>AC</Button>
-                <Button onClick={clearOne} value={''}><PiBackspaceThin size={30} /></Button>
+                <Button onClick={clearAll}>AC</Button>
+                <Button onClick={clearOne}><PiBackspaceThin size={30} /></Button>
                 <Button onClick={porcentage} value={'%'}>%</Button>
                 <Button onClick={handleOperator} value={'/'}>/</Button>
                 <Button onClick={handleNum} value={'7'}>7</Button>
