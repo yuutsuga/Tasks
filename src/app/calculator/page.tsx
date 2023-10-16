@@ -5,16 +5,15 @@ import { PiBackspaceThin } from "react-icons/pi";
 import { useState } from "react";
 
 const Calculator = () => {
-    const [num, setNum]: any = useState();
+    const [num, setNum]: any = useState('');
     const [oldNum, setOldNum]: any = useState();
     const [operator, setOperator]: any = useState();
 
     const handleNum = (e: any) => {
-        let input = e.target.value;
         if (num === 0) {
-            setNum(input);
+            setNum(e.target.value)
         } else {
-            setNum(num + input);
+            setNum(num + e.target.value)
         }
     }
 
