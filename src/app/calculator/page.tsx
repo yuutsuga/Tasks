@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Calculator = () => {
     const [num, setNum]: any = useState();
-    const [oldNum, setOldNum]: any = useState(0);
+    const [oldNum, setOldNum]: any = useState();
     const [operator, setOperator]: any = useState();
 
     const handleNum = (e: any) => {
@@ -39,13 +39,13 @@ const Calculator = () => {
 
     const calc = () => {
         if (operator === '/') {
-            setNum(parseFloat(oldNum) / parseFloat(num));
+            setNum((Number(oldNum) / Number(num)).toFixed(1));
         } else if (operator === 'x') {
-            setNum(parseFloat(oldNum) * parseFloat(num));
+            setNum((Number(oldNum) * Number(num)).toFixed(1));
         } else if (operator === '-') {
-            setNum(parseFloat(oldNum) - parseFloat(num));
+            setNum((Number(oldNum) - Number(num)).toFixed(1));
         } else if (operator === '+') {
-            setNum(parseFloat(oldNum) + parseFloat(num));
+            setNum((Number(oldNum) + Number(num)).toFixed(1));
         }
     }
     return (
@@ -54,8 +54,8 @@ const Calculator = () => {
             <Title>Do your math :D</Title>
             <Result>{num}</Result>
             <Keypad>
-                <Button onClick={clearAll} value={''}>AC</Button>
-                <Button onClick={clearOne} value={''}><PiBackspaceThin size={30} /></Button>
+                <Button onClick={clearAll}>AC</Button>
+                <Button onClick={clearOne}><PiBackspaceThin size={30} /></Button>
                 <Button onClick={porcentage} value={'%'}>%</Button>
                 <Button onClick={handleOperator} value={'/'}>/</Button>
                 <Button onClick={handleNum} value={'7'}>7</Button>
