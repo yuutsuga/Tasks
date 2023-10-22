@@ -11,6 +11,7 @@ export default function Home() {
         <Link href={"/calculator"}><Tasks>Calculator</Tasks></Link>
         <Link href={"/stopwatch"}><Tasks>Stopwatch</Tasks></Link>
         <Link href={"/triangle-sizes"}><Tasks>Triangle Sizes</Tasks></Link>
+        <Link href={"/table"}><Tasks>Table</Tasks></Link>
       </Container>
     </Main>
   )
