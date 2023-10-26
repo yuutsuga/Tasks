@@ -2,48 +2,52 @@ import styled from "styled-components";
 
 export const Body = styled.div`
     display: flex;
+	flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     height: 100vh;
     color: #fff;
+	gap: 20px;
     font-family: system-ui;
     background-image: url('https://i.pinimg.com/564x/d3/d2/8f/d3d28f1b49766ebd8a03adf48f7519fd.jpg');
     background-position: center;
     background-repeat: none;
     background-size: cover;
 `
-export const Cell = styled.input`
-    width: 200px;
-    height: 70px;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-color: #855FF1;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 5px;
+export const Line = styled.div`
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 `
 export const Cells = styled.div`
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
 `
-
 export const Button = styled.button`
-    position: relative;
-    bottom: 20rem;
-    width: 20rem;
-    height: 5rem;
-    margin: 5px;
-    font-size: 20px;
     cursor: pointer;
-    border: none;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    margin: 3px;
     border-radius: 5px;
-    &:hover{
+    &:hover {
         background-color: rgb(143, 61, 215);
         transition: 0.5s;
     }
+`
+export const Cell = styled.input`
+	border: 2px solid rgba(255, 255, 255, .2);
+    border-color: #856FF1;
+    border-radius: 5px;
+    margin: 2px;
+    height: 50px;
+`
+export const Buttons = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
 `
