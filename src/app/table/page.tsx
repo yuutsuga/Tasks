@@ -37,29 +37,6 @@ const Tabela = () => {
     temporaryInput.click();
   };
 
-
-  // const renderCells = () => {
-  //   const cells = [];
-
-  //   for (let i = 0; i < numLine; i++) {
-  //     const line = [];
-  //     for (let j = 0; j < numColumns; j++) {
-  //       line.push(
-  //         <div key={`${i}-${j}`}>
-  //           {`${i}-${j}` in imageStorage && (
-  //             <Image src={imageStorage[`${i}-${j}`]} width={50} height={50} alt='cell-image'/>
-  //           )}
-  //           <Cell type="text" placeholder="Type your text here" />
-  //           <a onClick={() => addImage(`${i}-${j}`)}>+</a>
-  //         </div>
-  //       );
-  //     }
-  //     cells.push(<div key={i}>{line}</div>);
-  //   }
-
-  //   return cells;
-  // };
-
   return (
     <Body>
       <Buttons>
@@ -78,7 +55,7 @@ const Tabela = () => {
               <Line key={i}>
                 {Array.from(Array(numLine).keys()).map((j: number) => (
                   <Cell key={`${i}-${j}`} />
-                ))}
+                  ))}
               </Line>
             ))}
         </Cells>
